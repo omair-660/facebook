@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>requests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <style >
+  :root{
+    --main-color: #334c8c;
+    --main-color-2: #1877f2;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body {
+      background-color: #221f1f;
+      font-family: sans-serif;
+  }
+  header nav .img-1 {
+      display: flex;
+      align-items: center;
+  }
+  header nav .img-2{
+      display: flex;
+      align-items: center;
+  }
+  header nav .img-3 {
+      display: flex;
+      align-items: center;
+  }
+  header nav .img-1 img{
+    width: 28px;
+    margin-right: 23px;
+  }
+  header nav .img-1 .me {
+      width: 50px;
+      border-radius: 50%;
+  }
+  header {
+      background-color: #313335;
+      padding: 5px 12px;
+  }
+  header nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  header nav .img-2 img {
+      width: 33px;
+      margin-right: 27px;
+
+  }
+  .head-phone {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+  }
+  @media (max-width:767px) {
+    .head-phone {
+      display: flex;
+      padding: 8px;
+    }
+  .head-phone .me{
+      width: 50px!important;
+      border-radius: 50%;
+  }
+  .head-phone img {
+      width: 28px;
+      border-radius: 50%;
+  }
+  }
+
+    header nav  a {
+      position: relative;
+      width: 33px;
+      margin-right: 27px;
+    }
+    header nav  a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color-2);
+        left: 0;
+        bottom: -11px;
+        transition: 0.5s;
+    }
+      header nav a:hover::after{
+        width: 100%;
+      }
+      header nav img.req::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color-2);
+    left: 0;
+    bottom: -12px;
+    transition: 0.5s;
+}
+  header nav .img-3 img{
+    width: 30px;
+    margin-right: 23px;
+  }
+  header nav .img-3 .logo{
+    width: 50px;
+  }
+@media (min-width:950px) {
+  nav{
+  justify-content: space-around!important;
+}
+}
+@media (max-width:767px) {
+  header nav .img-1{
+    display: none;
+  }
+  header nav .img-2{
+    display: none;
+  }
+  header nav .img-3{
+    display: none!important;
+  }
+}
+@media (max-width:767px) {
+  header nav  a::after {
+    bottom: -24px!important;
+  }
+}
+.frinds{
+  width: unset;
+}
+.frinds .contaner {
+    display: flex;
+    align-items: center;
+    margin: 0 13px;
+    width: unset;
+    justify-content: flex-end;
+}
+.button{
+  display: flex;
+}
+.frinds .text {
+    direction: rtl;
+    margin-left: 0;
+    width: 100%;
+}
+.frinds button{
+  border: none;
+  outline: none;
+  border-radius: 4px;
+text-transform: capitalize;
+margin-right: 10px;
+color: #fff;
+  padding: 8px 131px;
+  transition: 0.5s;
+    background-color: var(--main-color-2);
+    cursor: pointer;
+}
+.frinds button:hover{
+  background-color: var(--main-color);
+}
+.frinds .heading {
+    margin: 23px 0;
+}
+.frinds h4 {
+    direction: rtl;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-right: 24px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.frinds span {
+    color: #e02424;
+    font-size: 19px;
+    font-weight: normal;
+}
+.frinds h3 {
+    color: #fff;
+    margin-bottom: 9px;
+    margin-right: 10px;
+}
+.frinds img {
+    margin-bottom: 14px;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+@media (min-width:924px) {
+  .frinds button {
+    padding: 8px 173px;
+  }
+}
+@media (min-width:1065px) {
+  .frinds button {
+    padding: 8px 210px;
+  }
+}
+@media (max-width:767px) {
+  .frinds button {
+    padding: 8px 35px;
+  }
+}
+}
+
+
+
+</style>
+<header>
+  <nav>
+    <div class="head-phone">
+      <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
+        <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
+        <a href=""><img src="icons8-messenger-50.png" alt=""></a>
+        <a href="ricuest.html"><img src="icons8-group-24.png" alt="" class="req"></a>
+        <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+      <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+    </div>
+    <div class="img-1">
+      <img src="IMG_20230617_003137_384.jpg" alt="" class="me">
+      <a href="navi.html"><img src="icons8-bell-30.png" alt=""></a>
+      <img src="icons8-messenger-50.png" alt="">
+      <img src="icons8-plus-24.png" alt="">
+    </div>
+    <div class="img-2">
+      <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+    <a href=""><img src="icons8-group-24.png" alt=""></a>
+      <a href=""><img src="icons8-shop-50.png" alt=""></a>
+      <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
+      <a href="index.html"><img src="icons8-home-24.png" alt=""></a>
+    </div>
+    <div class="img-3">
+      <img src="icons8-search-50.png" alt="">
+      <img src="facebook.png" alt="" class="logo">
+    </div>
+  </nav>
+</header>
+    <div class="frinds">
+      <div class="heading">
+        <h4>requests <span>12</span> </h4>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20230617_003137_384.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="PicsArt_06-28-08.42.45.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="post-3.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="post-10.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG20230301161433.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="text">
+          <h3>omair mohammed</h3>
+          <div class="button">
+            <button type="button" name="button">confirm</button>
+            <button type="button" name="button">delete</button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="IMG_20220829_080410_172.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
