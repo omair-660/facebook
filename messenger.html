@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Messenger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <style media="screen">
+    :root{
+      --main-color: #334c8c;
+      --main-color-2: #1877f2;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+        background-color: #221f1f;
+        font-family: sans-serif;
+    }
+    header nav .img-1 {
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-2{
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-3 {
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-1 img{
+      width: 28px;
+      margin-right: 23px;
+    }
+    header nav .img-1 .me {
+        width: 50px;
+        border-radius: 50%;
+    }
+    header {
+        background-color: #313335;
+        padding: 5px 12px;
+    }
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav .img-2 img {
+        width: 33px;
+        margin-right: 27px;
+    }
+    header nav .img-3 img{
+      width: 30px;
+      margin-right: 23px;
+    }
+    header nav .img-3 .logo{
+      width: 50px;
+    }
+    header nav a {
+      position: relative;
+      width: 33px;
+      margin-right: 27px;
+    }
+    header nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color-2);
+        left: 0;
+        bottom: -11px;
+        transition: 0.5s;
+    }
+      header nav a:hover::after{
+        width: 100%;
+      }
+      header nav .navi{
+        position: relative;
+      }
+      header nav .navi::before {
+          content: "9";
+          position: absolute;
+          background: #d81f1f;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          padding: 2px;
+          left: -6px;
+          top: -11px;
+      }
+      @media (max-width:767px) {
+        header nav  a::after {
+          bottom: -24px!important;
+        }
+      }
+      @media (min-width:950px) {
+        nav{
+        justify-content: space-around!important;
+      }
+      }
+      @media (max-width:767px) {
+        header nav .img-2 .home::after {
+            bottom: -6px;
+        }
+        header nav .img-2 a::after {
+          bottom: -6px;
+        }
+        header nav .img-1{
+          display: none;
+        }
+        header nav .img-2{
+          display: none;
+        }
+        header nav .img-3{
+          display: none!important;
+        }
+      }
+      .head-phone {
+          display: none;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+      }
+      @media (max-width:767px) {
+        .head-phone {
+          display: flex;
+          padding: 8px;
+        }
+      .head-phone .me{
+          width: 50px!important;
+          border-radius: 50%;
+      }
+      .head-phone img {
+          width: 28px;
+          border-radius: 50%;
+      }
+      }
+   .contaner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+    position: relative;
+    transition: 0.5s;
+    padding: 8px 0;
+}
+.contaner:hover{
+  background-color: #0000005e;
+}
+  .contaner img {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    outline: 2px solid #aaa;
+    padding: 2px;
+}
+.contaner::after {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    left: 41px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #35d135;
+    z-index: 99;
+}
+@media (min-width:950px) {
+  .contaner{
+    padding-left: 6%;
+  }
+  .contaner::after {
+    left: 102px;
+}
+}
+.contaner p{
+    color: #e1e3e3;
+}
+.image {
+    margin-left: 12px;
+}
+.text {
+    margin-left: 2%;
+}
+    </style>
+    <header>
+      <nav>
+        <div class="head-phone">
+          <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
+            <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
+            <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+            <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
+            <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+          <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+        </div>
+        <div class="img-1">
+          <img src="IMG_20230617_003137_384.jpg" alt="" class="me">
+          <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt="" class="navi"></a>
+          <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+          <img src="icons8-plus-24.png" alt="">
+        </div>
+        <div class="img-2">
+          <a href="list.html"><img src="icons8-menu-50.png" alt="" class="menu"></a>
+        <a href=""><img src="icons8-group-24.png" alt=""></a>
+          <a href=""><img src="icons8-shop-50.png" alt=""></a>
+          <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
+          <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+        </div>
+        <div class="img-3">
+          <img src="icons8-search-50.png" alt="">
+          <img src="facebook.png" alt="" class="logo">
+        </div>
+      </nav>
+    </header>
+    <a href="chat.html">
+    <div class="contaner">
+      <div class="image">
+        <img src="post-8.jpg" alt="">
+      </div>
+      <div class="text">
+        <p>mark zuckerberg</p>
+      </div>
+    </div>
+  </a>
+  <a href="chat.html">
+  <div class="contaner">
+    <div class="image">
+      <img src="post-8.jpg" alt="">
+    </div>
+    <div class="text">
+      <p>mark zuckerberg</p>
+    </div>
+  </div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+<a href="chat.html">
+<div class="contaner">
+  <div class="image">
+    <img src="post-8.jpg" alt="">
+  </div>
+  <div class="text">
+    <p>mark zuckerberg</p>
+  </div>
+</div>
+</a>
+  </body>
+</html>

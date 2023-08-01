@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <style media="screen">
+    :root{
+      --main-color: #334c8c;
+      --main-color-2: #1877f2;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+        background-color: #221f1f;
+        font-family: sans-serif;
+    }
+    header nav .img-1 {
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-2{
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-3 {
+        display: flex;
+        align-items: center;
+    }
+    header nav .img-1 img{
+      width: 28px;
+      margin-right: 23px;
+    }
+    header nav .img-1 .me {
+        width: 50px;
+        border-radius: 50%;
+    }
+    header {
+        background-color: #313335;
+        padding: 5px 12px;
+    }
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header nav .img-2 img {
+        width: 33px;
+        margin-right: 27px;
+    }
+    header nav .img-3 img{
+      width: 30px;
+      margin-right: 23px;
+    }
+    header nav .img-3 .logo{
+      width: 50px;
+    }
+    header nav a {
+      position: relative;
+      width: 33px;
+      margin-right: 27px;
+    }
+    header nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color-2);
+        left: 0;
+        bottom: -11px;
+        transition: 0.5s;
+    }
+      header nav a:hover::after{
+        width: 100%;
+      }
+      header nav .navi{
+        position: relative;
+      }
+      header nav .navi::before {
+          content: "9";
+          position: absolute;
+          background: #d81f1f;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          padding: 2px;
+          left: -6px;
+          top: -11px;
+      }
+      @media (max-width:767px) {
+        header nav  a::after {
+          bottom: -24px!important;
+        }
+      }
+      @media (min-width:950px) {
+        nav{
+        justify-content: space-around!important;
+      }
+      }
+      @media (max-width:767px) {
+        header nav .img-2 .home::after {
+            bottom: -6px;
+        }
+        header nav .img-2 a::after {
+          bottom: -6px;
+        }
+        header nav .img-1{
+          display: none;
+        }
+        header nav .img-2{
+          display: none;
+        }
+        header nav .img-3{
+          display: none!important;
+        }
+      }
+      .head-phone {
+          display: none;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+      }
+      @media (max-width:767px) {
+        .head-phone {
+          display: flex;
+          padding: 8px;
+        }
+      .head-phone .me{
+          width: 50px!important;
+          border-radius: 50%;
+      }
+      .head-phone img {
+          width: 28px;
+          border-radius: 50%;
+      }
+      }
+      .chat {
+    margin-top: 23px;
+}
+      .contaner {
+    display: flex;
+}
+      .profile {
+          width: 300px;
+      }
+      .profile .box {
+    text-align: center;
+}
+.profile .box .image img {
+    width: 70px;
+    border-radius: 50%;
+}
+.profile .box .image{
+  position: relative;
+}
+.profile .box .image::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #49df4f;
+    left: 54%;
+    top: 76%;
+    border-radius: 50%;
+}
+.profile .box h4 {
+    color: #fff;
+    padding: 3px 0;
+}
+.profile .box h6 {
+    color: #cccccce6;
+    letter-spacing: 1px;
+}
+.box-2 {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile .box-2 .image img {
+  width: 33px;
+}
+.profile .box-2 .image {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+.profile .box-2 .image p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.talk{
+  width: 400px;
+  padding-bottom: 44px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc5c;
+    /* padding-bottom: 5px; */
+    background: black;
+    margin: 0 -15px;
+    padding: 5px 15px;
+    border-top-left-radius: 21px;
+    border-top-right-radius: 8px;
+    border-right: 1px solid #cccccc52;
+    border-left: 1px solid #cccccc52;
+}
+.nav .image{
+  display: flex;
+    align-items: center;
+}
+.nav .image img {
+    width: 29px;
+    transform: rotate(-84deg);
+}
+.nav .image p {
+    background: #1877f2;
+    color: #fff;
+    font-size: 17px;
+    width: 32px;
+    border-radius: 50%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin-left: 13px;
+}
+.nav .box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+}
+.nav .box::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #49df4f;
+    bottom: 2px;
+    right: 6px;
+}
+.nav .box img {
+    width: 40px;
+    border-radius: 50%;
+}
+.nav .box h4 {
+    color: #fff;
+    margin-right: 12px;
+}
+.nav .box h6 {
+    color: #cccccce6;
+    direction: rtl;
+    margin-right: 13px;
+    padding-top: 3px;
+}
+.section {
+    border-right: 1px solid #cccccc52;
+    border-top: none;
+    border-left: 1px solid #cccccc52;
+    margin: 0 -15px;
+    padding: 0 16px 13px 16px;
+    background: #00000073;
+    box-shadow: 1px 2px 11px #aaaaaa4d;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+.section img {
+    width: 26px;
+    border-radius: 50%;
+}
+.section span {
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 12px;
+}
+.box-3 {
+    display: flex;
+    align-items: center;
+}
+p.right {
+    direction: rtl;
+    background: var(--main-color-2);
+    color: #ffffffe0;
+    border-radius: 22px;
+    padding: 7px 8px;
+    width: fit-content;
+    margin: 14px 0px 14px auto;
+      font-family: system-ui;
+}
+p.left {
+    color: #ffffffe0;
+    background: #313335;
+    text-align: center;
+    width: 163px;
+    border-radius: 22px;
+    padding: 7px 8px;
+    margin: 5px 0 0 11px;
+    font-family: system-ui;
+}
+.left-1{
+  color: #ffffffe0;
+  background: #313335;
+  text-align: center;
+  width: 163px;
+  border-radius: 22px;
+  padding: 7px 8px;
+  margin: 5px 0 0 36px;
+    font-family: system-ui;
+}
+input[type="text"] {
+    border: none;
+    background: none;
+    border-top: 1px solid #cccccc52;
+    width: 100%;
+    padding-top: 21px;
+    outline: none;
+    color: #fff;
+}
+::placeholder{
+  color: #aaa;
+}
+.footer .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+div.send {
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+p.send {
+    position: absolute;
+    top: -30px;
+    width: 176px;
+    color: #ffffffe0;
+    right: -7px;
+    padding: 3px;
+    box-shadow: 1px 2px 11px #5a1414;
+    display: none;
+    font-family: system-ui;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+div.send:hover p.send{
+  display: block;
+}
+@media (max-width:767px) {
+  .profile {
+    display: none;
+}
+.talk {
+    width: 337px;
+}
+.contaner {
+    justify-content: center;
+}
+}
+
+  </style>
+  <body>
+    <header>
+      <nav>
+        <div class="head-phone">
+          <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
+            <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
+            <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+            <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
+            <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+          <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+        </div>
+        <div class="img-1">
+          <img src="IMG_20230617_003137_384.jpg" alt="" class="me">
+          <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt="" class="navi"></a>
+          <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+          <img src="icons8-plus-24.png" alt="">
+        </div>
+        <div class="img-2">
+          <a href="list.html"><img src="icons8-menu-50.png" alt="" class="menu"></a>
+        <a href=""><img src="icons8-group-24.png" alt=""></a>
+          <a href=""><img src="icons8-shop-50.png" alt=""></a>
+          <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
+          <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+        </div>
+        <div class="img-3">
+          <img src="icons8-search-50.png" alt="">
+          <img src="facebook.png" alt="" class="logo">
+        </div>
+      </nav>
+    </header>
+    <div class="chat">
+      <div class="contaner">
+        <div class="profile">
+          <div class="box">
+            <div class="image">
+              <img src="post-8.jpg" alt="">
+            </div>
+            <div class="text">
+              <h4>mark zuckerberg</h4>
+              <h6>active</h6>
+            </div>
+          </div>
+          <div class="box-2">
+            <div class="image">
+              <img src="icons8-search-501.png" alt="">
+              <p>search</p>
+            </div>
+            <div class="image">
+              <img src="icons8-bell-100.png" alt="">
+              <p>mute</p>
+            </div>
+            <div class="image">
+              <img src="facebook.png" alt="">
+              <p>profile</p>
+            </div>
+          </div>
+        </div>
+        <div class="talk">
+          <div class="nav">
+            <div class="image">
+              <img src="icons8-call-50.png" alt="">
+              <p>i</p>
+            </div>
+            <div class="box">
+              <img src="post-8.jpg" alt="">
+              <div class="text">
+                <h4>mark zuckerberg</h4>
+                <h6>active</h6>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <span>22/6/2003</span>
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">بقولك يبروو</p>
+
+          </div>
+          <p class="left-1">ي عمير بعد اذنك اقبل الادد</p>
+
+            <span>1/8/2023</span>
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">ماترد يعم علياا هو ف اي</p>
+          </div>
+            <p class="right">مفيش يمارك حاجه م فاضيلك والله</p>
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">طب هقابلك انهارده ف الكافيه الساعه 6</p>
+          </div>
+            <p class="right">لي ف حاجه ولا اي</p>
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">يسطا الفيسبوك اللي نت بتعمله دا هيخرب بيتي بعد اذنك يعني الغيه</p>
+          </div>
+            <p class="right">بعد دا كله جاي تقول دلوقتي !!</p>
+
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">يعم نت اللي مبتردش</p>
+          </div>
+            <p class="right">بص يمارك من الاخر كدا انا م هلغي حاجه </p>
+            <div class="box-3">
+              <img src="post-8.jpg" alt="">
+            <p class="left">بس نت كدا هتخرب بيتي </p>
+          </div>
+            <p class="right">الاااه مانت عملت ابليكشن threads وخربت بيت الواد ماسك ومحدش كلمك </p>
+            <div class="footer">
+              <input type="text" name="" value="" placeholder="Type a message...">
+              <div class="image">
+                <div class="con">
+                  <img src="icons8-sticker-24.png" alt="">
+                  <img src="icons8-sticker-48.png" alt="">
+                  <img src="icons8-smile-50.png" alt="">
+                  <img src="icons8-interaction-32.png" alt="">
+                  <img src="icons8-camera-50.png" alt="">
+                </div>
+                <div class="send">
+                <img src="icons8-send-48.png" alt="">
+                <p class="send">لسه متعلمتش باك اند والله يعسسل </p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
