@@ -45,6 +45,9 @@
     header {
         background-color: #313335;
         padding: 5px 12px;
+        position: sticky;
+        top: 48px;
+        z-index: 999;
     }
     header nav {
         display: flex;
@@ -145,6 +148,28 @@
           border-radius: 50%;
       }
       }
+      .theder {
+          background: #313335;
+          display: flex!important;
+          justify-content: space-between!important;
+          padding: 0 42px!important;
+          border-bottom: 1px solid #444;
+          position: sticky;
+          top: 0px;
+          z-index: 99;
+      }
+      .theder a {
+          font-size: 20px;
+          color: var(--main-color-2);
+          font-weight: bolder;
+          letter-spacing: 1px;
+          text-decoration: none;
+          /* padding: 2px 0; */
+          margin-top: 11px;
+      }
+      .theder img {
+          width: 31px;
+      }
       .chat {
     margin-top: 23px;
 }
@@ -205,6 +230,7 @@
   padding-bottom: 44px;
 }
 .nav {
+    z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -217,6 +243,16 @@
     border-top-right-radius: 8px;
     border-right: 1px solid #cccccc52;
     border-left: 1px solid #cccccc52;
+    position: fixed;
+    width: 430px;
+    top: 108px;
+    max-width: 100%;
+}
+@media (max-width:767px) {
+  .nav {
+      top: 127px;
+      width: 367px;
+  }
 }
 .nav .image{
   display: flex;
@@ -225,6 +261,11 @@
 .nav .image img {
     width: 29px;
     transform: rotate(-84deg);
+}
+.nav .image img:first-child {
+    transform: unset;
+    margin-right: 9px;
+    width: 23px;
 }
 .nav .image p {
     background: #1877f2;
@@ -291,6 +332,15 @@
     text-align: center;
     padding: 13px 0;
     font-size: 12px;
+}
+.section span:first-child {
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 12px;
+    margin-top: 20px;
 }
 .box-3 {
     display: flex;
@@ -379,6 +429,10 @@ div.send:hover p.send{
 
   </style>
   <body>
+    <div class="theder">
+      <a href="search.html"> <img src="icons8-search-50.png" alt=""></a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
     <header>
       <nav>
         <div class="head-phone">
@@ -438,6 +492,7 @@ div.send:hover p.send{
         <div class="talk">
           <div class="nav">
             <div class="image">
+              <a href="messenger.html"><img src="prev-grey.png" alt=""></a>
               <img src="icons8-call-50.png" alt="">
               <p>i</p>
             </div>

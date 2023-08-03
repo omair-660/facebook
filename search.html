@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <style media="screen">
+      :root{
+        --main-color: #334c8c;
+        --main-color-2: #1877f2;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      body {
+          background-color: #221f1f;
+          font-family: sans-serif;
+      }
+      nav {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          flex-direction: row-reverse;
+          align-items: center;
+          margin-top: 10px;
+          border-bottom: 1px solid #cccccc52;
+          padding-bottom: 14px;
+      }
+input[type="search"] {
+    width: 84%;
+    outline: none;
+    background: #313335;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+      color: #ccc;
+}
+nav img {
+    width: 35px;
+    margin-top: 12px;
+}
+::placeholder{
+  color: #aaa;
+  letter-spacing: 1px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 30px;
+}
+.top h4 {
+    color: #fff;
+}
+.top p {
+    color: var(--main-color-2);
+    cursor: pointer;
+    /* font-size: 18px; */
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+::selection {
+    color: #c31717;
+    background: #000;
+}
+.contaner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px;
+    transition: 0.5s;
+    margin: 13px;
+}
+.contaner:hover {
+    background-color: #0000005e;
+
+    border-radius: 5px;
+}
+.box {
+    display: flex;
+    align-items: center;
+}
+.box .text {
+    margin-left: 12px;
+}
+.contaner .box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.contaner .box h4 {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.contaner .box span {
+    color: #ccc;
+    font-size: 12px;
+    position: relative;
+    margin-left: 11px;
+}
+.contaner .box span::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--main-color);
+    left: -13px;
+    bottom: 3px;
+}
+.point{
+  position: relative;
+  transition: 0.5s;
+}
+.point span:first-child {
+    position: absolute;
+    width: 6px;
+    margin-left: -8px;
+    height: 6px;
+    background: #5b5b5b;
+    border-radius: 50%;
+}
+.point span:last-child {
+    position: absolute;
+    width: 6px;
+    margin-left: -18px;
+    height: 6px;
+    background: #5b5b5b;
+    border-radius: 50%;
+}
+.point span:nth-child(2){
+    position: absolute;
+    width: 6px;
+    margin-left: -28px;
+    height: 6px;
+    background: #5b5b5b;
+    border-radius: 50%;
+}
+.info{
+  position: absolute;
+    right: 0;
+    background-color: #313335;
+    z-index: 999;
+    padding: 12px;
+    border-radius: 12px;
+    width: 304px;
+    display:none;
+transition: 0.5s;
+
+}
+.point:hover .info{
+  display: block;
+transition: 0.5s;
+}
+.info .box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cccccc4d;
+    padding: 0 8px 16px;
+}
+.info .box p {
+    color: #fff;
+    text-transform: capitalize;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.info .con h5 {
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.info .con{
+  margin-top: 5px;
+  padding: 0 8px 8px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.info .con:hover{
+  background: #191919;
+}
+.info .con p {
+color: #aaa;
+font-size: 13px;
+}
+.info .con .text{
+
+}
+.info .con img{
+
+}
+    </style>
+    <nav>
+      <input type="search" name="" value="" placeholder="Search">
+      <a href="index.html"><img src="prev-grey.png" alt=""></a>
+    </nav>
+    <div class="section">
+      <div class="top">
+        <h4>Recent</h4>
+        <p>view all</p>
+      </div>
+      <div class="contaner">
+        <div class="box">
+          <img src="ahly.png" alt="">
+          <div class="text">
+            <h4>alahly fc</h4>
+            <span>4 posts news</span>
+          </div>
+        </div>
+        <div class="point">
+          <div class="info">
+            <div class="box">
+              <img src="ahly.png" alt="">
+              <p>alahly fc</p>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>Delete</h5>
+                <p>Remove this form you search history</p>
+              </div>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>pin this search</h5>
+                <p>You can only pin searches at a time</p>
+              </div>
+            </div>
+          </div>
+          <span></span>
+        <span style="position:absolute;width:6px;margin-left:-8px;height:6px;background:#5b5b5b;border-radius:50%;"></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="box">
+          <img src="twettir.png" alt="">
+          <div class="text">
+            <h4>twettir</h4>
+            <span>+9 posts news</span>
+          </div>
+        </div>
+        <div class="point">
+          <div class="info">
+            <div class="box">
+              <img src="twettir.png" alt="">
+              <p>twettir</p>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>Delete</h5>
+                <p>Remove this form you search history</p>
+              </div>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>pin this search</h5>
+                <p>You can only pin searches at a time</p>
+              </div>
+            </div>
+          </div>
+          <span></span>
+<span style="position:absolute;width:6px;margin-left:-8px;height:6px;background:#5b5b5b;border-radius:50%;"></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="box">
+          <img src="insta.png" alt="">
+          <div class="text">
+            <h4>instagram</h4>
+            <span>6 posts news</span>
+          </div>
+        </div>
+        <div class="point">
+          <div class="info">
+            <div class="box">
+              <img src="insta.png" alt="">
+              <p>instagram</p>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>Delete</h5>
+                <p>Remove this form you search history</p>
+              </div>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>pin this search</h5>
+                <p>You can only pin searches at a time</p>
+              </div>
+            </div>
+          </div>
+          <span></span>
+          <span style="position:absolute;width:6px;margin-left:-8px;height:6px;background:#5b5b5b;border-radius:50%;"></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="contaner">
+        <div class="box">
+          <img src="facebook.png" alt="">
+          <div class="text">
+            <h4>facebook</h4>
+            <span>+12 posts news</span>
+          </div>
+        </div>
+        <div class="point">
+          <div class="info">
+            <div class="box">
+              <img src="facebook.png" alt="">
+              <p>facebook</p>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>Delete</h5>
+                <p>Remove this form you search history</p>
+              </div>
+            </div>
+            <div class="con">
+              <img src="" alt="">
+              <div class="text">
+                <h5>pin this search</h5>
+                <p>You can only pin searches at a time</p>
+              </div>
+            </div>
+          </div>
+          <span></span>
+          <span style="position:absolute;width:6px;margin-left:-8px;height:6px;background:#5b5b5b;border-radius:50%;"></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

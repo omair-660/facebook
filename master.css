@@ -37,6 +37,9 @@ header nav .img-1 .me {
 header {
     background-color: #313335;
     padding: 5px 12px;
+    position: sticky;
+    top: 48px;
+    z-index: 999;
 }
 header nav {
     display: flex;
@@ -58,6 +61,28 @@ header nav a {
   position: relative;
   width: 33px;
   margin-right: 27px;
+}
+.theder {
+    background: #313335;
+    display: flex!important;
+    justify-content: space-between!important;
+    padding: 0 42px!important;
+    border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.theder a {
+    font-size: 20px;
+    color: var(--main-color-2);
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-decoration: none;
+    /* padding: 2px 0; */
+    margin-top: 11px;
+}
+.theder img {
+    width: 31px;
 }
 .head-phone {
     display: none;
@@ -336,15 +361,16 @@ header nav .navi::before {
     justify-content: space-between;
     padding-right: 42px
 }
-.story .heading {
+.left .headingg {
     display: flex;
-    width: 610px;
-    justify-content: center;
+    width: 570px;
     padding: 6px;
+    margin-top: 17px;
+    justify-content: flex-end;
 }
-.story .heading p {
+.left .headingg p {
     color: #aaa;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     margin-right: 100px;
     text-transform: capitalize;
     font-weight: 700;
@@ -352,15 +378,49 @@ header nav .navi::before {
     padding-bottom: 10px;
     position: relative;
 }
-.story .heading p:last-child::after {
+.left .headingg .blue{
+  color:  #1877f2;
+}
+.stoory {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    position: relative;
+}
+.reels {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+.stoory::after {
     position: absolute;
     content: "";
-    width: 100px;
+    width: 100%;
     height: 2px;
-    background: var(--main-color);
-    bottom: 0;
-    left: -22px;
-    transition: 0.5;
+    background: var(--main-color-2);
+    left: -45px;
+    bottom: 0px;
+}
+@media (max-width:767px) {
+  .left .headingg p{
+    margin-right:72px;
+  }
+  .stoory::after{
+    left: -35px;
+  }
+  .left .headingg {
+    display: flex;
+    width: 282px;
+    padding: 6px;
+    margin-top: 17px;
+    margin-left: 40px;
+    justify-content:unset;
+}
+}
+.headingg img {
+    width: 28px;
+    margin-top: -7px;
+    margin-right: 8px;
 }
 
 .story .box {
@@ -414,7 +474,7 @@ header nav .navi::before {
   transform: translatex(-50%) rotate(90deg);
 }
 .story {
-    margin-top: 30px;
+    margin-top: 12px;
     background: #313335;
     height: fit-content;
     padding: 1px 10px 10px 11px;

@@ -47,6 +47,9 @@
     header {
         background-color: #313335;
         padding: 5px 12px;
+        position: sticky;
+        top: 48px;
+        z-index: 999;
     }
     header nav {
         display: flex;
@@ -204,13 +207,39 @@ border-radius: 3px;
       display: none;
   }
 }
+.theder {
+    background: #313335;
+    display: flex!important;
+    justify-content: space-between!important;
+    padding: 0 42px!important;
+    border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.theder a {
+    font-size: 20px;
+    color: var(--main-color-2);
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-decoration: none;
+    /* padding: 2px 0; */
+    margin-top: 11px;
+}
+.theder img {
+    width: 31px;
+}
   </style>
+  <div class="theder">
+    <a href="search.html"> <img src="icons8-search-50.png" alt=""></a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+  </div>
   <header>
     <nav>
       <div class="head-phone">
         <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
           <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
-          <a href=""><img src="icons8-messenger-50.png" alt=""></a>
+          <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
           <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
           <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
         <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
@@ -218,7 +247,7 @@ border-radius: 3px;
       <div class="img-1">
         <a href=""><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
         <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
-        <a href=""><img src="icons8-messenger-50.png" alt=""></a>
+        <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
         <a href=""><img src="icons8-plus-24.png" alt=""></a>
       </div>
       <div class="img-2">
@@ -229,7 +258,6 @@ border-radius: 3px;
         <a href="index.html"><img src="icons8-home-24.png" alt=""></a>
       </div>
       <div class="img-3">
-        <img src="icons8-search-50.png" alt="">
         <img src="facebook.png" alt="" class="logo">
       </div>
     </nav>

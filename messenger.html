@@ -46,6 +46,9 @@
     header {
         background-color: #313335;
         padding: 5px 12px;
+        position: sticky;
+        top: 49px;
+        z-index: 999;
     }
     header nav {
         display: flex;
@@ -194,7 +197,33 @@
 .text {
     margin-left: 2%;
 }
+.theder {
+    background: #313335;
+    display: flex!important;
+    justify-content: space-between!important;
+    padding: 0 42px!important;
+    border-bottom: 1px solid #444;
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.theder a {
+    font-size: 20px;
+    color: var(--main-color-2);
+    font-weight: bolder;
+    letter-spacing: 1px;
+    text-decoration: none;
+    /* padding: 2px 0; */
+    margin-top: 11px;
+}
+.theder img {
+    width: 31px;
+}
     </style>
+    <div class="theder">
+      <a href="search.html"> <img src="icons8-search-50.png" alt=""></a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
     <header>
       <nav>
         <div class="head-phone">
@@ -213,13 +242,12 @@
         </div>
         <div class="img-2">
           <a href="list.html"><img src="icons8-menu-50.png" alt="" class="menu"></a>
-        <a href=""><img src="icons8-group-24.png" alt=""></a>
+        <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
           <a href=""><img src="icons8-shop-50.png" alt=""></a>
           <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
           <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
         </div>
         <div class="img-3">
-          <img src="icons8-search-50.png" alt="">
           <img src="facebook.png" alt="" class="logo">
         </div>
       </nav>
