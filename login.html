@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>log in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <style media="screen">
+    :root{
+      --main-color: #334c8c;
+      --main-color-2: #1877f2;
+    }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none} .separator a,.post-body img{-webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    pointer-events:none} pre,kbd,blockquote,table{-webkit-user-select:text;
+    -khtml-user-select:text;
+    -moz-user-select:text;
+    -ms-user-select:text;
+    user-select:text;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    body {
+        background-image: linear-gradient(to right, #230927, #0e354d);
+        font-family: sans-serif;
+    }
+    form.lan {
+    text-align: center;
+    margin-top: 52px;
+}
+select {
+    text-align: center;
+    border: none;
+    outline: none;
+    background: no-repeat;
+    color: #ffffffc2;
+    width: 130px;
+}
+option {
+    background: #607d8b;
+    color: black;
+}
+    .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.logo img{
+  width: 50px;
+}
+.form {
+    margin-left: 3%;
+}
+input {
+    width: 96%;
+    position: relative;
+}
+input[type="email"] {
+    background: #071916;
+    border: 1px solid #c5cae97d;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    color: #fff;
+}
+input[type="password"]{
+    background: #071916;
+    border: 1px solid #c5cae97d;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    outline: none;
+    color: #fff;
+}
+input[type="submit"] {
+    padding: 10px;
+    border-radius: 25px;
+    background: var(--main-color-2);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    transition: 0.5s;
+}
+input[type="submit"]:hover{
+background: var(--main-color);
+}
+::placeholder{
+  color: #aaa;
+}
+input:hover::placeholder{
+  position: absolute;
+  top: 3px;
+  transition: 1s;
+  color: #eee;
+}
+.forgot {
+    text-align: center;
+    margin-top: 25px;
+}
+.forgot a{
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+.forgot a:hover{
+  color: #ffffffc2;
+}
+.bottom {
+    height: 193px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 18px;
+}
+.bottom a {
+    color: var(--main-color-2);
+    padding: 7px;
+    font-size: 16.5px;
+    transition: 0.5s;
+    text-decoration: none;
+    width: 96%;
+    border: 1px solid var(--main-color-2);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.bottom a:hover {
+  color: #ffffffc2;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.bottom p {
+    color: #92b7d1;
+    font-family: cursive;
+    letter-spacing: 2px;
+}
+    </style>
+    <form class="lan" action="index.html" method="post">
+      <select name="lan">
+        <option value="English(US)">English(US)</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Turkce">Turkce</option>
+        <option value="Russian">Russian</option>
+        <option value="French">French</option>
+        <option value="Spanish">Spanish</option>
+      </select>
+    </form>
+    <div class="logo">
+      <img src="facebook.png" alt="">
+    </div>
+    <div class="form">
+      <form class="input" action="index.html" method="post">
+        <input type="email" name="" value="" placeholder="Mobile number or email" required>
+        <br>
+        <input type="password" name="" value="" placeholder="Password" required  min="12">
+        <br>
+        <a href="index.html"><input type="submit" name="" value="Log in"></a>
+      </form>
+    </div>
+    <div class="forgot">
+      <a href="#">Forgot Password ?</a>
+    </div>
+    <div class="bottom">
+      <a href="create.html">Create new account</a>
+      <p>Meta</p>
+    </div>
+  </body>
+</html>

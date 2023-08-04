@@ -13,9 +13,23 @@
       --main-color-2: #1877f2;
     }
     *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none} .separator a,.post-body img{-webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    pointer-events:none} pre,kbd,blockquote,table{-webkit-user-select:text;
+    -khtml-user-select:text;
+    -moz-user-select:text;
+    -ms-user-select:text;
+    user-select:text;
     }
     html{
       scroll-behavior: smooth;
@@ -48,8 +62,9 @@
         background-color: #313335;
         padding: 5px 12px;
         position: sticky;
-        top: 48px;
+        top: 0;
         z-index: 999;
+
     }
     header nav {
         display: flex;
@@ -148,10 +163,10 @@
       display: flex;
       padding: 8px;
     }
-  .head-phone .me{
-      width: 50px!important;
-      border-radius: 50%;
-  }
+    .head-phone .me {
+        width: 18px!important;
+        border-radius: 50%;
+    }
   .head-phone img {
       width: 28px;
       border-radius: 50%;
@@ -209,7 +224,7 @@ border-radius: 3px;
 }
 .theder {
     background: #313335;
-    display: flex!important;
+    display: none;
     justify-content: space-between!important;
     padding: 0 42px!important;
     border-bottom: 1px solid #444;
@@ -240,6 +255,7 @@ border-radius: 3px;
         <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
           <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
           <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+            <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
           <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
           <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
         <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
@@ -252,8 +268,8 @@ border-radius: 3px;
       </div>
       <div class="img-2">
         <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
-      <a href=""><img src="icons8-group-24.png" alt=""></a>
-        <a href=""><img src="icons8-shop-50.png" alt=""></a>
+      <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
+        <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
         <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
         <a href="index.html"><img src="icons8-home-24.png" alt=""></a>
       </div>
@@ -371,5 +387,30 @@ border-radius: 3px;
         <img src="post-2.jpg" alt="">
       </div>
     </div>
+    <script>
+    //<![CDATA[
+    document.oncontextmenu = function() {
+    return false;
+    };
+    document.onkeydown = function(e) {
+    if (e.keyCode == 123) {
+    return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode ==  I .charCodeAt(0)) {
+    return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode ==  J .charCodeAt(0)) {
+    return false;
+    }
+    if (e.ctrlKey && e.keyCode ==  U .charCodeAt(0)) {
+    return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode ==  C .charCodeAt(0)) {
+    return false;
+    }
+    
+    }
+    //]]>
+    </script>
   </body>
 </html>

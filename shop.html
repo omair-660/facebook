@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>more</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <style media="screen">
+      :root{
+        --main-color: #334c8c;
+        --main-color-2: #1877f2;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      body {
+          background-color: #221f1f;
+          font-family: sans-serif;
+      }
+      header nav .img-1 {
+          display: flex;
+          align-items: center;
+      }
+      header nav .img-2{
+          display: flex;
+          align-items: center;
+      }
+      header nav .img-3 {
+          display: flex;
+          align-items: center;
+      }
+      header nav .img-1 img{
+        width: 28px;
+        margin-right: 23px;
+      }
+      header nav .img-1 .me {
+          width: 50px;
+          border-radius: 50%;
+      }
+      header {
+          background-color: #313335;
+          padding: 5px 12px;
+          position: sticky;
+          top: 0;
+          z-index: 999;
+
+      }
+      header nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      header nav .img-2 img {
+          width: 33px;
+          margin-right: 27px;
+      }
+      header nav .img-3 img{
+        width: 30px;
+        margin-right: 23px;
+      }
+      header nav .img-3 .logo{
+        width: 50px;
+      }
+      header nav a {
+        position: relative;
+        width: 33px;
+        margin-right: 27px;
+      }
+      header nav a::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: var(--main-color-2);
+          left: 0;
+          bottom: -11px;
+          transition: 0.5s;
+      }
+        header nav a:hover::after{
+          width: 100%;
+        }
+      header nav .menu::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--main-color-2);
+        left: 0;
+        bottom: -12px;
+        transition: 0.5s;
+      }
+
+      }
+      header nav .navi{
+        position: relative;
+      }
+      header nav .navi::before {
+          content: "9";
+          position: absolute;
+          background: #d81f1f;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          padding: 2px;
+          left: -6px;
+          top: -11px;
+      }
+      @media (max-width:767px) {
+        header nav  a::after {
+          bottom: -24px!important;
+        }
+      }
+      @media (min-width:950px) {
+        nav{
+        justify-content: space-around!important;
+      }
+      }
+      @media (max-width:767px) {
+        header nav .img-2 .home::after {
+            bottom: -6px;
+        }
+        header nav .img-2 a::after {
+          bottom: -6px;
+        }
+        header nav .img-1{
+          display: none;
+        }
+        header nav .img-2{
+          display: none;
+        }
+        header nav .img-3{
+          display: none!important;
+        }
+      }
+      .head-phone {
+          display: none;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+      }
+      @media (max-width:767px) {
+        .head-phone {
+          display: none;
+          padding: 8px;
+        }
+        .head-phone .me {
+            width: 18px!important;
+            border-radius: 50%;
+        }
+      .head-phone img {
+          width: 28px;
+          border-radius: 50%;
+      }
+      }
+      .theder {
+          background: #313335;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 42px;
+          border-bottom: 1px solid #444;
+          position: sticky;
+          top: 0px;
+          z-index: 99;
+      }
+      .theder a {
+          font-size: 20px;
+          color: var(--main-color-2);
+          font-weight: bolder;
+          letter-spacing: 1px;
+          text-decoration: none;
+          /* padding: 2px 0; */
+          margin-top: 11px;
+      }
+      .theder img {
+          width: 31px;
+      }
+      .nav {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin: 15px 14px;
+
+          padding-bottom: 12px;
+      }
+      .nav .box {
+          display: flex;
+          align-items: center;
+          color: #fff;
+      }
+      .nav h3 {
+          margin-left: 16px;
+          font-size: 20px;
+          letter-spacing: 1px;
+      }
+      .nav .box img {
+      width: 30px;
+      }
+      .nav .image img {
+        margin-right: 16px;
+        width: 33px;
+      }
+      .pra {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 15px 14px;
+    border-bottom: 1px solid #374384;
+    padding-bottom: 12px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.pra  p {
+    background: #313335;
+    padding: 8px 16px;
+    width: 150px;
+    border-radius: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.contaner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    width: 100%;
+    justify-items: center;
+    row-gap: 26px;
+}
+.contaner .box img {
+    width: 178px;
+    height: 313px;
+    margin-top: 7px;
+}
+.contaner .box {
+    background: black;
+    padding: 9px;
+    border-radius: 13px;
+    width: 300px;
+    text-align: center;
+    transition: 0.5s;
+}
+.contaner .box:hover {
+    transform: scale(1.1);
+}
+.contaner .box p {
+    color: #fff;
+    text-align: center;
+    width: 193px;
+    text-transform: capitalize;
+    margin: 8px auto;
+    word-spacing: 1px;
+    white-space: nowrap;
+}
+.today {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 15px 14px;
+    padding-bottom: 12px;
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.today p:first-child{
+color: #fff;
+}
+.today p:nth-child(2){
+color: var(--main-color-2);
+}
+      </style>
+      <div class="theder" style="display:none">
+        <a href="search.html"> <img src="icons8-search-50.png" alt=""></a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
+      <header>
+        <nav>
+          <div class="head-phone">
+            <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
+              <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
+              <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+                <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
+              <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
+              <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+            <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+          </div>
+          <div class="img-1">
+            <img src="IMG_20230617_003137_384.jpg" alt="" class="me">
+            <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt="" class="navi"></a>
+            <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+            <img src="icons8-plus-24.png" alt="">
+          </div>
+          <div class="img-2">
+            <a href="list.html"><img src="icons8-menu-50.png" alt="" class="menu"></a>
+          <a href=""><img src="icons8-group-24.png" alt=""></a>
+            <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
+            <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
+            <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
+          </div>
+          <div class="img-3">
+            <img src="facebook.png" alt="" class="logo">
+          </div>
+        </nav>
+      </header>
+      <div class="nav">
+        <div class="box">
+          <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
+          <h3>Marketplace</h3>
+        </div>
+        <div class="image">
+          <a href="search.html"><img src="icons8-search-50.png" alt=""></a>
+        </div>
+      </div>
+      <div class="pra">
+        <p>sell</p>
+        <p>categroies</p>
+      </div>
+      <div class="today">
+        <p>today's picks</p>
+        <p>change</p>
+      </div>
+      <div class="contaner">
+        <div class="box">
+          <img src="iphone-1.png" alt="">
+          <p>iphone 13 'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="iphone-2.png" alt="">
+          <p>iphone 13 'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="iphone-3.png" alt="">
+          <p>iphone 13 'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="iphone-4.png" alt="">
+          <p>iphone 13 pro 'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="iphone-2.png" alt="">
+          <p>iphone 12'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="Iffiliate-Product08.jpg" alt="">
+          <p>iphone 13 'zero' <span>450 USD.</span> </p>
+        </div>
+        <div class="box">
+          <img src="iphone-1.png" alt="">
+          <p>iphone 13 'zero' <span>450 USD.</span> </p>
+        </div>
+      </div>
+      <script>
+      //<![CDATA[
+      document.oncontextmenu = function() {
+      return false;
+      };
+      document.onkeydown = function(e) {
+      if (e.keyCode == 123) {
+      return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode ==  I .charCodeAt(0)) {
+      return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode ==  J .charCodeAt(0)) {
+      return false;
+      }
+      if (e.ctrlKey && e.keyCode ==  U .charCodeAt(0)) {
+      return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode ==  C .charCodeAt(0)) {
+      return false;
+      }
+      
+      }
+      //]]>
+      </script>
+</body>
+</html>

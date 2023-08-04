@@ -12,9 +12,23 @@
         --main-color-2: #1877f2;
       }
       *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none} .separator a,.post-body img{-webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      pointer-events:none} pre,kbd,blockquote,table{-webkit-user-select:text;
+      -khtml-user-select:text;
+      -moz-user-select:text;
+      -ms-user-select:text;
+      user-select:text;
       }
       html{
         scroll-behavior: smooth;
@@ -49,6 +63,7 @@
           position: sticky;
           top: 48px;
           z-index: 999;
+          display: none;
       }
       header nav {
           display: flex;
@@ -149,13 +164,13 @@
       }
       @media (max-width:767px) {
         .head-phone {
-          display: flex;
+          display: none;
           padding: 8px;
         }
-      .head-phone .me{
-          width: 50px!important;
-          border-radius: 50%;
-      }
+        .head-phone .me {
+            width: 18px!important;
+            border-radius: 50%;
+        }
       .head-phone img {
           width: 28px;
           border-radius: 50%;
@@ -201,6 +216,8 @@ img.feed {
 .bottom {
     background: #2f2f2f;
     border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+
 }
 .bottom .contaner {
     display: flex;
@@ -223,6 +240,7 @@ img.feed {
     width: fit-content;
     position: relative;
     margin: 0 0 0 80%;
+    transition: 0.5s;
 }
 .angle .con {
     position: absolute;
@@ -232,8 +250,9 @@ img.feed {
     padding: 12px;
     border-radius: 10px;
     top: 15px;
-    width: 232px;
+    width: fit-content;
     display: none;
+    transition: 0.5s;
 }
 .bottom .contaner:nth-child(2) .angle{
   margin: 0 0 0 76%;
@@ -249,23 +268,16 @@ img.feed {
   right: -29px;
 }
 }
-.angle .con p {
-    background: #313131;
-    margin-bottom: 10px;
-    padding: 6px 11px;
-    border-radius: 14px;
-    font-size: 14px;
-    cursor: pointer;
-    width: 209px;
-}
+
 .angle:hover .con{
   display: block;
 }
 .bottom .contaner:hover {
   background-color: #221f1f;
 }
-.bottom .contaner:last-child{
-  border: none;
+.bottom .contaner:last-child {
+    border: none;
+    padding-bottom: 7px;
 }
 .addres{
   margin-left: 2%;
@@ -273,13 +285,14 @@ padding-top: 13px;
 }
 .theder {
     background: #313335;
-    display: flex!important;
-    justify-content: space-between!important;
-    padding: 0 42px!important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 42px;
     border-bottom: 1px solid #444;
     position: sticky;
     top: 0px;
     z-index: 99;
+    display: none;
 }
 .theder a {
     font-size: 20px;
@@ -310,6 +323,8 @@ padding-top: 13px;
     align-items: flex-start;
     justify-content: space-between;
     margin: 15px 7px;
+    border-bottom: 1px solid #374384;
+    padding-bottom: 12px;
 }
 .nav .box {
     display: flex;
@@ -348,6 +363,36 @@ font-size: 14px;
 .pro h6 {
   color: #aaa;
 }
+.img-ho {
+    display: flex;
+    align-items: center;
+    background: #313131;
+    margin-bottom: 10px;
+    padding: 6px 11px;
+    border-radius: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 209px;
+}
+.img-ho img {
+    width: 31px;
+    margin-right: 6px;
+}
+.img-ho-2{
+  display: flex;
+  align-items: center;
+  background: #313131;
+  margin-bottom: 10px;
+  padding: 6px 11px;
+  border-radius: 14px;
+  font-size: 14px;
+  cursor: pointer;
+    width: 243px;
+}
+.img-ho-2 img {
+    width: 31px;
+    margin-right: 6px;
+}
 </style>
     <div class="theder">
       <a href="search.html"> <img src="icons8-search-50.png" alt=""></a>
@@ -359,6 +404,7 @@ font-size: 14px;
           <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
             <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
             <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+              <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
             <a href="ricuest.html"><img src="icons8-group-24.png" alt=""></a>
             <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
           <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
@@ -372,7 +418,7 @@ font-size: 14px;
         <div class="img-2">
           <a href="list.html"><img src="icons8-menu-50.png" alt="" class="menu"></a>
         <a href=""><img src="icons8-group-24.png" alt=""></a>
-          <a href=""><img src="icons8-shop-50.png" alt=""></a>
+        <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
           <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
           <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
         </div>
@@ -391,6 +437,7 @@ font-size: 14px;
         <a href="search.html"><img src="icons8-search-50.png" alt=""></a>
       </div>
     </div>
+    <a href="https://www.facebook.com/omair.rajeh" target="_blank">
     <div class="pro">
       <div class="box">
         <img src="IMG20230301161433.jpg" alt="">
@@ -400,6 +447,7 @@ font-size: 14px;
         </div>
       </div>
     </div>
+  </a>
     <p class="addres">Your shortcuts</p>
     <div class="contaner">
       <div class="image">
@@ -519,11 +567,22 @@ font-size: 14px;
         </div>
         <div class="angle">
           <div class="con">
-            <img src="" alt="">
-            <p>Help Center</p>
-            <p>Support Inbox</p>
-            <p>Report a problem</p>
+            <div class="img-ho">
+              <img src="icons8-help-50.png" alt="">
+              <p>Help Center</p>
+            </div>
+            <div class="img-ho">
+              <img src="icons8-inbox-64.png" alt="">
+              <p>Support Inbox</p>
+            </div>
+            <div class="img-ho">
+              <img src="icons8-problem-48.png" alt="">
+              <p>Report a problem</p>
+            </div>
+            <div class="img-ho">
+              <img src="icons8-policies-24.png" alt="">
             <p>Terms & Policies</p>
+            </div>
           </div>
         <img src="left-angle.png" alt="" class="ang">
       </div>
@@ -538,21 +597,55 @@ font-size: 14px;
         </div>
         <div class="angle">
           <div class="con">
-
-            <p>Setting</p>
-            <p>Privacy shortcuts</p>
-            <p>Your Time on Facebook</p>
-            <p>Device requests</p>
-            <p>Recent ad activity</p>
-            <p>Orders and payments</p>
-            <p>Dark mode</p>
-            <p>Language</p>
-            <p>Cellular data Usage</p>
-            <p>Code Generator</p>
+            <div class="img-ho-2">
+              <img src="icons8-settings-48.png" alt="">
+              <p>Setting</p>
+            </div>
+            <div class="img-ho-2">
+              <img src="icons8-privacy-50.png" alt="">
+              <p>Privacy shortcuts</p>
+            </div>
+            <div class="img-ho-2">
+              <img src="icons8-time-48.png" alt="">
+              <p>Your Time on Facebook</p>
+            </div>
+            <div class="img-ho-2">
+              <img src="icons8-device-50.png" alt="">
+              <p>Device requests</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Recent ad activity</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Orders and payments</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Orders and payments</p>
+            </div>
+            <div class="img-ho-2">
+              <img src="dark.png" alt="">
+              <p>Dark mode</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Language</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Cellular data Usage</p>
+            </div>
+            <div class="img-ho-2">
+              <img src=".png" alt="">
+              <p>Code Generator</p>
+            </div>
           </div>
         <img src="left-angle.png" alt="" class="ang">
       </div>
       </div>
+      <a href="loading.html">
       <div class="contaner">
         <div class="image">
           <img src="out.png" alt="" >
@@ -561,7 +654,32 @@ font-size: 14px;
           <p>log out</p>
         </div>
       </div>
+    </a>
     </div>
+<script>
+//<![CDATA[
+document.oncontextmenu = function() {
+return false;
+};
+document.onkeydown = function(e) {
+if (e.keyCode == 123) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  I .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  J .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.keyCode ==  U .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  C .charCodeAt(0)) {
+return false;
+}
 
+}
+//]]>
+</script>
   </body>
 </html>

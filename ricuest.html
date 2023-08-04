@@ -72,10 +72,10 @@
       display: flex;
       padding: 8px;
     }
-  .head-phone .me{
-      width: 50px!important;
-      border-radius: 50%;
-  }
+    .head-phone .me {
+        width: 18px!important;
+        border-radius: 50%;
+    }
   .head-phone img {
       width: 28px;
       border-radius: 50%;
@@ -171,6 +171,13 @@ color: #fff;
 .frinds button:hover{
   background-color: var(--main-color);
 }
+.frinds button:last-child{
+  background: #313335;
+  transition: 0.5s;
+}
+.frinds button:last-child:hover{
+  background: #121111eb;
+}
 .frinds .heading {
     margin: 23px 0;
 }
@@ -249,6 +256,7 @@ color: #fff;
       <a href="https://www.facebook.com/omair.rajeh" target="_blank" class="me"><img src="IMG_20230617_003137_384.jpg" alt="" class="me"></a>
         <a href="navi.html" class="navi"><img src="icons8-bell-30.png" alt=""></a>
         <a href="messenger.html"><img src="icons8-messenger-50.png" alt=""></a>
+        <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
         <a href="ricuest.html"><img src="icons8-group-24.png" alt="" class="req"></a>
         <a href="index.html" class="home"><img src="icons8-home-24.png" alt=""></a>
       <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
@@ -262,7 +270,7 @@ color: #fff;
     <div class="img-2">
       <a href="list.html"><img src="icons8-menu-50.png" alt=""></a>
     <a href=""><img src="icons8-group-24.png" alt=""></a>
-      <a href=""><img src="icons8-shop-50.png" alt=""></a>
+      <a href="shop.html"><img src="icons8-shop-50.png" alt=""></a>
       <a href=""><img src="icons8-hdtv-24.png" alt=""></a>
       <a href="index.html"><img src="icons8-home-24.png" alt=""></a>
     </div>
@@ -421,6 +429,30 @@ color: #fff;
         </div>
       </div>
     </div>
+<script>
+//<![CDATA[
+document.oncontextmenu = function() {
+return false;
+};
+document.onkeydown = function(e) {
+if (e.keyCode == 123) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  I .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  J .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.keyCode ==  U .charCodeAt(0)) {
+return false;
+}
+if (e.ctrlKey && e.shiftKey && e.keyCode ==  C .charCodeAt(0)) {
+return false;
+}
 
+}
+//]]>
+</script>
   </body>
 </html>
